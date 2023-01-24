@@ -1,0 +1,792 @@
+.writeBtnContainer {
+    /* width: 100%; */
+    padding: 8px 33px;
+    border: 1px solid rgba(0, 16, 61, 0.12);
+    border-radius: 8px;
+    /* margin-top: 50px; */
+    margin-bottom: 12px;
+    background: #fff;
+    /* transition: background .2s ease; */
+    user-select: none;
+    cursor: pointer;
+}
+
+/* .writeBtnContainer:hover {
+    background: rgba(0, 16, 61, .04);
+} */
+
+.line {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 8px;
+    background: rgba(0, 16, 61, 0.12);
+    /* transition: background .2s ease; */
+}
+
+.newDir {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #999;
+    /* transition: all .2s ease; */
+}
+
+.btnContainer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.btnContainer:hover {
+    background: rgba(0, 16, 61, 0.04);
+}
+
+.btnPlus {
+    padding: 0 15px;
+    transform: translateY(2px);
+}
+
+.btnContainer:hover .newDir {
+    color: #666;
+}
+
+.btnContainer:hover .btnPlus svg path {
+    fill: #666;
+}
+
+/* 
+.themeContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme {
+    user-select: none;
+} */
+/* 
+.themeActive {
+    color: #E7E8EA;
+    /* transition: color .2s ease; */
+/* }  */
+
+/* .containerHeaderActive {
+    background: #232324;
+} */
+/* 
+.palette {
+    transform: translateY(2px);
+    padding: 10px;
+} */
+
+.containerMail {
+    width: 100%;
+}
+
+.imgDoc {
+    width: 256px;
+    height: 190px;
+    border-radius: 12px;
+}
+
+/* .imgDoc:not(:last-child) {
+    margin-right: 10px;
+} */
+
+.containerImg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    /* transition: background .2s ease; */
+}
+
+.containerImg:hover {
+    background: rgba(0, 16, 61, 0.04);
+}
+
+.imgTooltip {
+    position: absolute;
+    display: none;
+    top: -170%;
+    left: -274px;
+    width: 264px;
+    height: 198px;
+    padding: 4px;
+    background: #fff;
+    /* transition: background .2s ease; */
+    box-shadow: 0px 4px 32px rgba(0, 16, 61, 0.24);
+    border-radius: 12px;
+    opacity: 0;
+    /* transition: all .2s ease; */
+    z-index: 10000;
+}
+
+.containerImg:hover .imgTooltip {
+    display: block;
+    opacity: 1;
+}
+
+.imgTooltipContainer {
+    width: 32px;
+    height: 32px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.descImg {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333333;
+    /* transition: color .2s ease; */
+}
+
+.figureImg {
+    position: relative;
+    display: inline-block;
+}
+
+.figureImg:not(:last-child) {
+    margin-right: 20px;
+}
+
+.downloadContainer {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    background: linear-gradient(360deg, rgba(236, 237, 240, 0.95) 56.81%, rgba(236, 237, 240, 0) 104.46%);
+    /* transition: background .2s ease; */
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.downloadIcon {
+    margin-right: 8px;
+}
+
+.downloadText {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #2C2D2E;
+    /* transition: color .2s ease; */
+}
+
+.writeBtn {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: 700;
+    color: #333333;
+    /* transition: color .2s ease; */
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.writeBtn:focus {
+    outline: none;
+}
+
+.writeBtnIcon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .newDir {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .btnPlus {
+        display: none;
+    }
+
+    .writeBtnContainer {
+        padding: 9px;
+    }
+
+    .writeBtn {
+        display: none;
+    }
+
+    .writeBtnIcon {
+        display: block;
+    }
+
+    .theme {
+        display: none;
+    }
+}
+
+/* Фильтры */
+
+.btnFilterContainer {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 100000;
+}
+.btnFilterContainer:hover {
+    background: rgba(0, 16, 61, 0.08);
+}
+
+.btnFilter {
+    padding-right: 10px;
+    padding-left: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #2C2D2E;
+    user-select: none;
+}
+
+.arrowFilter {
+    transform: translateY(2px);
+}
+
+.tooltipFilterContainer {
+    min-width: 240px;
+    position: absolute;
+    /* bottom: -196px; */
+    top: 54px;
+    right: 5px;
+    /* left: -137px; */
+    background: #fff;
+    box-shadow: 0px 4px 32px rgba(0, 16, 61, 0.16);
+    border-radius: 12px;
+    transition: all .2s ease;
+    transform: translateY(-200px);
+    opacity: 0;
+}
+
+.tooltipFilterContainer.active {
+    border: none;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.filterList {
+    list-style: none;
+    padding: 7px 0;
+}
+
+.filterElem {
+    position: relative;
+    display: flex;
+    padding: 10px 24px;
+    border-radius: 12px;
+}
+
+.filterElem:hover {
+    background: rgba(0, 16, 61, 0.04);
+}
+
+/* .filterElem:not(:last-child) {
+    margin-bottom: 20px;
+} */
+
+.filterElemText {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.unreadIcon {
+    margin-right: 15px;
+    height: 3px;
+    width: 3px;
+    background: #005FF9;
+    border: 3px solid #005FF9;
+    border-radius: 100%;
+    transform: matrix(0.70, 0.00, 0.00, 0.70, 5, 5);
+    -ms-transform: matrix(0.70, 0.00, 0.00, 0.70, 5, 5);
+    -webkit-transform: matrix(0.70, 0.00, 0.00, 0.70, 5, 5);
+}
+
+.flagIcon {
+    margin-right: 3px;
+}
+
+.enclosureIcon {
+    margin-right: 4px;
+}
+
+.doneArrow {
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}
+
+/* Настройки */
+
+.settingContainer {
+    max-width: 190px;
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 30px;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.settingContainer:hover {
+    background: rgba(0, 16, 61, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.settingBtn {
+    user-select: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333333;
+}
+
+.settingIcon {
+    margin-right: 8px;
+}
+
+.settingBtn,
+.settingIcon {
+    transform: translateY(2px);
+}
+
+.tooltipSettingContainer {
+    display: none;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    /* padding: 20px; */
+    box-shadow: 0px -3px 48px rgba(0, 16, 61, 0.28);
+    opacity: 0;
+    transform: translateY(200px);
+    /* transition: all .2s ease; */
+}
+
+.activeTooltip .tooltipSettingContainer {
+    opacity: 1;
+    display: flex;
+    transform: translateY(0);
+}
+
+/* .openSetting {
+    transform: scale(1);
+    transition: all .2 ease;
+} */
+.openSetting {
+    transform: scale(0.9);
+}
+
+/* .tooltipSideBar {
+    width: 260px;
+} */
+
+.settingList {
+    min-width: 220px;
+    padding: 20px;
+    list-style: none;
+}
+
+.settingElem {
+    /* width: 210px; */
+    padding: 10px 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.settingElem:hover {
+    /* background: rgba(255, 255, 255, .08); */
+    background: rgba(0, 16, 61, .04);
+}
+
+.settingElem.activeElem {
+    background: rgba(0, 16, 61, 0.08);
+}
+
+.langText {
+    margin-right: 8px;
+}
+
+.sideBarLineHr {
+    position: absolute;
+    left: 260px;
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+    background: rgba(0, 16, 61, 0.08);
+    z-index: 1000;
+}
+
+.themeContainer {
+    display: none;
+}
+
+.themeContainer.activeThemeContainer {
+    display: block;
+    padding: 26px 49px 50px 29px;
+}
+
+.langContainer {
+    display: none;
+}
+
+.langContainer.activeThemeContainer {
+    display: block;
+    padding: 26px 49px 50px 29px;
+}
+
+.themeTitle,
+.langTitle {
+    color: #2C2D2E;
+    margin-bottom: 26px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.themeContainerList {
+    list-style: none;
+    display: flex;
+    width: 700px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 1100px) {
+    .themeContainer.activeThemeContainer {
+        padding: 26px 20px 20px 15px;
+    }
+    .themeContainerList {
+        width: 400px;
+    }
+}
+
+.themeElemList {
+    position: relative;
+    width: 67px;
+    height: 52px;
+    margin: 6px 10px;
+    cursor: pointer;
+}
+
+.themeElemList1 {
+    background: #4A352F;
+}
+
+.themeElemList2 {
+    background: #424242;
+}
+
+.themeElemList3 {
+    background: #5A355A;
+}
+
+.themeElemList4 {
+    background: #35385A;
+}
+
+.themeElemList5 {
+    background: #646ECB;
+}
+
+.themeElemList6 {
+    background: #E73672;
+}
+
+.themeElemList7 {
+    background: #F44336;
+}
+
+.themeElemList8 {
+    background: #388E3C;
+}
+
+.themeElemList9 {
+    background: #81D8D0;
+}
+
+.themeElemList10 {
+    background: #E2DCD2;
+}
+
+.themeElemList11 {
+    background: #FFEBCD;
+}
+
+.themeElemList12 {
+    background: #E7EED2;
+}
+
+.themeElemList13 {
+    background: #D0F0F7;
+}
+
+.themeElemList14 {
+    background: #C9D0FB;
+}
+
+.themeElemList15 {
+    background: #DDF3FF;
+}
+
+.themeElemList16 {
+    background: #F0F0F0;
+}
+
+.themeContainerHard {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    min-width: 700px;
+}
+
+.themeElemHard {
+    position: relative;
+    width: 120px;
+    height: 88px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.themeElemHard1 {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeElemHard2 {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeElemHard3 {
+    background: url('../img/div.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.arrowActive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.backActive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 95, 249, 0.48);
+}
+
+.checkWrapper {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.btnChangeLang {
+    padding: 8px 20px;
+    color: #fff;
+    background: #005FF9;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Checkbox */
+
+.langLabel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.iconLang {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.checkLang {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.rusBlock {
+    margin-bottom: 20px;
+}
+
+.rusBlock, .engBlock {
+    position: relative;
+}
+
+/* CheckRadio */
+
+.checkLang {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label связанного с .checkLang */
+.checkLang+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.checkLang+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 39px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на радио */
+.checkLang:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.checkLang:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.checkLang:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.checkLang:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.checkLang:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.checkLang:disabled+label::before {
+    background-color: #e9ecef;
+}
+
+.hoverWindow {
+    position: absolute;
+    padding: 15px;
+    text-align: center;
+    color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    background: rgba(0, 95, 249, .7);
+}
+
+.hoverWindow:hover {
+    opacity: 1;
+}
+
+.hrFilter {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, .4);
+}
+
+/* .filterElemBtnReset {
+    padding: 18px 24px;
+} */
+
+.resetBtnFilter {
+    width: 100%;
+    height: 100%;
+    padding: 18px 24px;
+    text-align: left;
+    background: none;
+    color: #333;
+    border-radius: 8px;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.filterElemBtnReset:hover {
+    background: rgba(0, 16, 61, 0.04);
+}
+
+@media (max-width: 768px) {
+    .settingBtn {
+        display: none;
+    }
+}
